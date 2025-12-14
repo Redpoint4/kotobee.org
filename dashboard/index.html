@@ -1,0 +1,1250 @@
+<!DOCTYPE html><html ng-app="web.Kotobee" lang="en"><head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=6, width=device-width">
+    <meta name="keywords" content="interactive ebooks, create ebooks, ebooks, ebook creator, ebook editor, epub software, epub creator, epub reader">
+    <meta name="description" content="Kotobee Dashboard - View and manage your account information">
+    <meta name="copyright" content="Vijua 2025">
+    <meta name="abstract" content="Kotobee Dashboard - View and manage your account information">
+
+    <title>Kotobee Dashboard</title>
+
+            <meta property="og:title" content="Kotobee Dashboard">
+        <meta property="og:description" content="Kotobee Dashboard - View and manage your account information">
+        <meta property="og:url" content="https://www.kotobee.org/dashboard">
+        <meta property="og:site_name" content="Kotobee">
+        <meta property="og:type" content="product">
+        <meta property="og:image" content="../img/web/logo/logo230.jpg">
+        <meta property="og:image:type" content="image/jpeg">
+        <link rel="image_src" type="image/jpeg" href="/img/web/logo/logo230.jpg">
+    
+
+	<style>
+		.dashboard {
+			min-height: 200px;
+		}
+		.dashboard p {
+			font-size: 18px;
+		}
+		h1.mainVertifyHeading {
+			font-family: "Muli-Bold";
+			font-size: 32px;
+			margin-top: 0;
+			color: #333;
+		}
+		p.box {
+			max-width: 600px;
+			margin: 10px auto;
+			color: #707070;
+		}
+		.dashboard-info {
+			margin-top: 30px;
+		}
+		.dashboard-info .row {
+			display: flex;
+			align-items: stretch;
+		}
+		.dashboard-info .col-md-6 {
+			display: flex;
+			flex-direction: column;
+		}
+		.info-card {
+			background-color: #f9f9f9;
+			border: 1px solid #eee;
+			padding: 20px;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+		.dashboard-info .col-md-6:first-child .info-card {
+			flex: 1;
+			min-height: 100%;
+		}
+		.dashboard-info .col-md-6:last-child {
+			justify-content: space-between;
+		}
+		.dashboard-info .col-md-6:last-child .info-card {
+			flex: 0 0 auto;
+		}
+		.dashboard-info .col-md-6:first-child .info-card:last-child {
+			margin-bottom: 0;
+		}
+		.dashboard-info .col-md-6:last-child .info-card:last-child {
+			margin-bottom: 0;
+		}
+		.info-card h3 {
+			margin-top: 0;
+			color: #333;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.info-item {
+			margin: 10px 0;
+			padding: 8px 0;
+			border-bottom: 1px solid #eee;
+		}
+		.info-item:last-child {
+			border-bottom: none;
+		}
+		.info-item strong {
+			color: #555;
+			display: inline-block;
+			min-width: 140px;
+		}
+		.referral-section {
+			margin-top: 30px;
+		}
+		.referral-item {
+			transition: background-color 0.2s;
+		}
+		.referral-item:hover {
+			background-color: #f9f9f9;
+		}
+		.referral-stats {
+			text-align: center;
+			padding: 20px 0;
+			border-bottom: 2px solid #eee;
+		}
+		.dashboard-actions {
+			text-align: center;
+			margin-top: 30px;
+		}
+		.dashboard-actions .btn {
+			margin: 0 10px;
+		}
+		.alert {
+			padding: 15px;
+			margin-bottom: 20px;
+			border: 1px solid transparent;
+			border-radius: 4px;
+		}
+		.alert-danger {
+			color: #a94442;
+			background-color: #f2dede;
+			border-color: #ebccd1;
+		}
+		.alignCenter {
+			text-align: center;
+		}
+		.alignCenter h2 {
+			margin: 20px 0;
+		}
+		.alignCenter h2 img {
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+		.inlineBlock {
+			display: inline-block;
+		}
+		.underlineDotted {
+			border-bottom: 1px dotted;
+			cursor: pointer;
+		}
+		.copy-btn {
+			margin-left: 10px;
+			padding: 5px 15px;
+			background-color: #5cb85c;
+			color: white;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+			font-size: 14px;
+			vertical-align: middle;
+		}
+		.copy-btn:hover {
+			background-color: #4cae4c;
+		}
+		.copy-btn.copied {
+			background-color: #5bc0de;
+		}
+		.dlBtn {
+			display: inline-block;
+			margin: 10px;
+			text-decoration: none;
+		}
+		.dlBtn img {
+			display: block;
+			height: 60px;
+			width: auto;
+		}
+		.dlBtn:hover {
+			opacity: 0.8;
+		}
+		.vSpace10 {
+			height: 10px;
+		}
+	</style>
+
+            <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../img/web/logo/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/web/logo/favicon.ico">
+    
+                
+    
+                        <link rel="preload" as="font" type="font/woff" crossorigin="" href="/css/fonts/fontawesome-webfont.woff">
+    <link rel="stylesheet" href="../css/styles.min_c=2565.css">
+
+    
+    <!-- Global site tag (gtag.js) -->
+    
+</head>
+
+<body ng-controller="GlobalCtrl" ng-init="init()" class="en" ng-cloak="" style="margin:0px; padding:0px">
+
+<div id="dashboard" class="">
+
+    <div id="globalModals" class="modal bootstrap-dialog fade type-success fade in" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+        <ng-include src="'/bundles/vijualib/templates/modals.html'"></ng-include>
+    </div>
+
+        
+
+
+
+<div class="menu">
+    <div class="inner ">
+        <a href="/en" class="logo">
+            <img src="../img/web/logo/normal-tm.png" alt="logo">
+        </a>
+        <div class="items hidden-md hidden-sm hidden-xs">
+            <div ng-include="'templates/menu'"></div>
+        </div>
+                <a href="#" class="menuBtn visible-md-block visible-sm-block visible-xs-block" ng-click="site.showMobileMenu=!site.showMobileMenu" aria-label="Menu">
+            <span class="icon icon-menu"></span>
+        </a>
+        <div class="langSubMenu mobile visible-md-block visible-sm-block visible-xs-block" ng-include="'templates/languages'"></div>
+    </div>
+    <div class="mobileMenu visible-md-block visible-sm-block visible-xs-block" ng-if="site.showMobileMenu">
+        <div ng-include="'templates/mobileMenu'"></div>
+    </div>
+    
+</div>
+
+<div class="overlayMenu" ng-class="site.showOverlayMobileMenu?'expanded':''">
+    <div class="inner">
+        <a href="/en" class="logo">
+            <img src="../img/web/logo/normal.png" alt="logo">
+        </a>
+        <div class="items hidden-md hidden-sm hidden-xs">
+            <div ng-include="'templates/menu'"></div>
+        </div>
+                <a href="#" class="menuBtn visible-md-block visible-sm-block visible-xs-block" ng-click="site.showOverlayMobileMenu=!site.showOverlayMobileMenu" aria-label="Menu">
+            <span class="icon icon-menu"></span>
+        </a>
+        <div class="langSubMenu mobile visible-md-block visible-sm-block visible-xs-block" ng-include="'templates/languages'"></div>
+    </div>
+    <div class="mobileMenu visible-md-block visible-sm-block visible-xs-block" ng-if="site.showOverlayMobileMenu">
+        <div ng-include="'templates/mobileMenu'"></div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="templates/menu">
+    <div>
+                <div class="productsSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Products <span class="caret"></span></a>
+            <div class="expanded">
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/products/author">
+                            <img src="/img/web/logo/author/icon.png" class="floatLeft" alt=""> 
+                            <div>
+                                <p>Kotobee Author <span class="popular">Popular</span></p>
+                                <span>Create beautiful EPUB-based interactive ebooks that run across all devices and platforms. Choose the plan that fits your needs. Start for free, upgrade anytime.</span>
+                            </div>
+                        </a>
+                        <a href="/en/products/reader">
+                            <img src="/img/web/logo/reader/icon.png" class="floatLeft" alt=""> 
+                            <div>
+                                <p>Kotobee Reader</p>
+                                <span>Download Kotobee Reader, a free ebook reader for PC & Mac. Enjoy interactive EPUBs, offline reading, and customizable settings for a personalized reading experience.</span>
+                            </div>
+                        </a>
+                        <a href="/en/miniapps">
+                            <img src="/img/web/logo/mini-apps/icon.png" class="floatLeft" alt="">
+                            <div>
+                                <p>Kotobee Mini-apps</p>
+                                <span>Add additional functionality to your ebooks through creative apps and widgets.</span>
+                            </div>
+                        </a>
+                        <a href="/en/products/narrator">
+                            <img src="/img/web/logo/narrator/icon.png" class="floatLeft" style="width:34px" alt="">
+                            <div>
+                                <p>Kotobee Narrator <span class="popular">New</span></p>
+                                <span>Create professional-quality audiobooks by compiling MP3 chapters and customizing metadata.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/products/library">
+                            <img src="/img/web/logo/library/icon.png" class="floatLeft" alt="">
+                            <div>
+                                <p>Kotobee Library <span class="popular">Popular</span></p>
+                                <span>Create digital bookshelves with full user access control. Manage through a powerful control panel and API.</span>
+                            </div>
+                        </a>
+                        <a href="/en/products/cloud">
+                            <img src="/img/web/logo/cloud/icon.png" class="floatLeft" alt="">
+                            <div>
+                                <p>Kotobee Cloud</p>
+                                <span>Host your ebooks online. Create cloud ebooks with user access options and high-security ebook DRM options.</span>
+                            </div>
+                        </a>
+                        <a href="https://books.kotobee.org/">
+                            <img src="/img/web/logo/kbooks/icon.png" class="floatLeft" alt="Kotobee books">
+                            <div>
+                                <p>Kotobee Books</p>
+                                <span>Publish and sell your ebooks directly through our online ebook store, reaching readers worldwide.</span>
+                            </div>
+                        </a>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="servicesSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Services <span class="caret"></span></a>
+            <div class="expanded">
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/services">
+                            <div>
+                                <p>Overview</p>
+                                <span>Learn about the various services provided by Kotobee.</span>
+                            </div>
+                        </a>
+                        <a href="/en/services/consultation">
+                            <div>
+                                <p>Ebook Consultation</p>
+                                <span>Consult with our experts on your ebook project.</span>
+                            </div>
+                        </a>
+                        <a href="/en/services/conversion">
+                            <div>
+                                <p>Ebook Conversion</p>
+                                <span>Convert your manuscript into any ebook format.</span>
+                            </div>
+                        </a>
+                        <a href="/en/services/marketing">
+                            <div>
+                                <p>Ebook Marketing</p>
+                                <span>Boost your ebook's visibility and captivate your audience.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/services/design">
+                            <div>
+                                <p>Ebook Design</p>
+                                <span>Transform your ebook into beautiful layouts.</span>
+                            </div>
+                        </a>
+                        <a href="/en/services/scripting">
+                            <div>
+                                <p>Ebook Scripting</p>
+                                <span>Create custom interactive content for your ebook.</span>
+                            </div>
+                        </a>
+                        <a href="/en/services/publishing">
+                            <div>
+                                <p>Ebook Publishing</p>
+                                <span>Publish your ebook on major publishing platforms.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="solutionsSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Solutions <span class="caret"></span></a>
+            <div class="expanded">
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/solutions/k12">
+                            <div>
+                                <p>K12</p>
+                                <span>Enrich your K12 students' learning experience.</span>
+                            </div>
+                        </a>
+                        <a href="/en/solutions/higher-education">
+                            <div>
+                                <p>Higher Education</p>
+                                <span>Enhance students' learning with interactive textbooks.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/solutions/corporate-training">
+                            <div>
+                                <p>Corporate Training</p>
+                                <span>Create interactive training courses for your employees.</span>
+                            </div>
+                        </a>
+                        <a href="/en/solutions/digital-publishing">
+                            <div>
+                                <p>Digital Publishing</p>
+                                <span>Turn your documents into interactive digital publications.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="item" href="/en/pricing">Pricing</a>
+        
+        <a class="item boxed scheduleDemoBtn" href="/en/livedemo">Schedule Demo</a>
+
+        <div class="resourcesSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Resources <span class="caret"></span></a>
+            <div class="expanded">
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/case-studies">
+                            <div>
+                                <p>Case Studies</p>
+                                <span>Discover how institutions successfully use Kotobee for education and publishing.</span>
+                            </div>
+                        </a>
+                        <a href="/academy">
+                            <div>
+                                <p>Kotobee Academy</p>
+                                <span>Access courses and tutorials to master Kotobee's ebook creation and publishing tools.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="https://blog.kotobee.com/">
+                            <div>
+                                <p>Blog</p>
+                                <span>Stay updated with trends, insights, and tips in ebook creation, elearning, and digital publishing.</span>
+                            </div>
+                        </a>
+                        <a href="https://support.kotobee.com">
+                            <div>
+                                <p>Help Center</p>
+                                <span>Find answers and support to get the most out of Kotobee.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="item" href="/en/contact">Contact</a>
+        <div class="langSubMenu" ng-include="'templates/languages'"></div>
+    </div>
+ </script>
+
+
+<script type="text/ng-template" id="templates/mobileMenu">
+    <div>
+                <div class="productsSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Products <span class="caret"></span></a>
+            <div class="expanded">
+                <a href="/en/products/author"><img src="/img/web/logo/author/icon.png" alt=""> Kotobee Author</a>
+                <a href="/en/products/reader"><img src="/img/web/logo/reader/icon.png" alt=""> Kotobee Reader</a>
+                <a href="/en/products/cloud"><img src="/img/web/logo/cloud/icon.png" alt=""> Kotobee Cloud</a>
+                <a href="/en/products/library"><img src="/img/web/logo/library/icon.png" alt=""> Kotobee Library</a>
+                <a href="/en/miniapps"><img src="/img/web/logo/mini-apps/icon.png" alt=""> Kotobee Mini-apps</a>
+                <a href="https://books.kotobee.org/"><img src="/img/web/logo/kbooks/icon.png" alt=""> Kotobee Books</a>
+                <a href="/en/products/narrator"><img src="/img/web/logo/narrator/icon.png" style="width:34px" alt=""> Kotobee Narrator</a>
+                            </div>
+        </div>
+        <div class="servicesSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Services <span class="caret"></span></a>
+            <div class="expanded">
+                <a href="/en/services">Overview</a>
+                <a href="/en/services/consultation">Ebook Consultation</a>
+                <a href="/en/services/conversion">Ebook Conversion</a>
+                <a href="/en/services/design">Ebook Design</a>
+                <a href="/en/services/scripting">Ebook Scripting</a>
+                <a href="/en/services/publishing">Ebook Publishing</a>
+                <a href="/en/services/marketing">Ebook Marketing</a>
+            </div>
+        </div>
+        <div class="solutionsSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Solutions <span class="caret"></span></a>
+            <div class="expanded">
+                <a href="/en/solutions/k12">K12</a>
+                <a href="/en/solutions/higher-education">Higher Education</a>
+                <a href="/en/solutions/corporate-training">Corporate Training</a>
+                <a href="/en/solutions/digital-publishing">Digital Publishing</a>
+            </div>
+        </div>
+        <a class="item" href="/en/pricing">Pricing</a>
+        
+        <a class="item boxed scheduleDemoBtn" href="/en/livedemo">Schedule Demo</a>
+
+        <div class="resourcesSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Resources <span class="caret"></span></a>
+            <div class="expanded">
+                <a href="/en/case-studies">Case Studies</a>
+                <a href="/academy">Kotobee Academy</a>
+                <a href="https://blog.kotobee.com/">Blog</a>
+                <a href="https://support.kotobee.com">Help Center</a>
+            </div>
+        </div>
+
+        <a class="item" href="/en/contact">Contact</a>
+        <div class="langSubMenu" ng-include="'templates/languages'"></div>
+    </div>
+ </script>
+
+
+ <script type="text/ng-template" id="templates/languages">
+    <a class="item" href="#" ng-click="toggleSubMenu($event)" aria-label="Language">
+        <span class="flag-icon flag-icon-gb"></span> <span class="caret"></span>
+    </a>
+
+            
+    <div class="expanded flip">
+        <a href="/en/dashboard" ng-class="('en'=='en')?'current':''"><span class="flag-icon flag-icon-gb"></span> English</a>
+        <a href="/fr/dashboard" ng-class="('fr'=='en')?'current':''"><span class="flag-icon flag-icon-fr"></span> Français</a>
+        <a href="/es/dashboard" ng-class="('es'=='en')?'current':''"><span class="flag-icon flag-icon-es"></span> Español</a>
+        <a href="/ar/dashboard" ng-class="('ar'=='en')?'current':''"><span class="flag-icon flag-icon-sa"></span> العربية</a>
+    </div>
+ </script>
+
+<div id="livedemoPopup" xclass="popup">
+    <div class="inner">
+        <div class="customInfo">
+            <div class="langSelection">
+                <div class="forDemo selectLabel">I'd like a demo in</div>
+                <div class="forMeeting selectLabel">I'd like a meeting in</div>
+
+                <select id="inputLang" class="langs">
+                    <option value="en" selected="selected">English</option>
+                                        <option value="es">Español</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+            <div class="agentSelection">
+                <div id="agentBtnContainer">
+                    <div class="btn-group" role="group">
+                        <button type="button" data-agent="ziad" class="_en _ar ziad active agentBtn btn btn-default">
+                            <img src="../img/web/livedemo/agentMale.png" alt="Muhammad">
+                            <div class="agentLabel">Agent</div>
+                            <div class="agentName">
+                                <span class="arLabel">زياد مجدي</span>
+                                <span>Ziad Magdy</span>
+                            </div>
+                            <div class="agentDesc">Different timings available</div>
+                        </button>
+                        <button type="button" data-agent="nadeen" class="_en _ar _es nadeen agentBtn btn btn-default">
+                            <img src="../img/web/livedemo/agentFemale.png" alt="Nadeen Amr">
+                            <div class="agentLabel">Agent</div>
+                            <div class="agentName">
+                                <span class="arLabel">نادين عمرو</span>
+                                <span>Nadeen Amr</span>
+                            </div>
+                            <div class="agentDesc">Different timings available</div>
+                        </button>
+                        <a href="/en/livedemo" class="_en _ar _es customTimingBtn btn btn-default">
+                            <p class="dontSuitYou">Agent timings don't suit you?</p>
+                            <span class="sendPreferredTiming">Send your preferred timing!</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="liveDemoFrame">
+            <span class="loading">
+                <span class="icon icon-spinner icon-spin vAlignCenter"></span>
+                <div class="hSpace2"></div>
+                Loading available times
+            </span>
+            <iframe width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <a href="#" class="popupCloseBtn">Close</a>
+    </div>
+</div>
+
+    
+<div class="kb section fixed">
+    <div class="kbInner">
+        <div class="vSpace20"></div>
+        <div class="dashboard">
+            
+	<div class="vSpace5" style="margin-top:-30px"></div>
+
+	<div id="dashboardContent">
+		<!-- Dashboard içeriği JavaScript ile dinamik olarak yüklenecek -->
+		<div class="alignCenter">
+			<p>Loading dashboard...</p>
+		</div>
+	</div>
+        </div>
+    </div>
+</div>
+<div class="vSpace40"></div>
+<div class="vSpace40"></div>
+<div class="vSpace40"></div>
+
+    
+<div class="kb section spread lightGray halfWide">
+    <div class="kbInner">
+        <div class="row">
+        </div>
+        <a id="newsletter"></a>
+        <div class="footerMenu row">
+            <div class="links-wrapper">
+                <div class="link-col col-one">
+                    <h4>Resources</h4>
+                    <a href="https://blog.kotobee.com/how-create-interactive-ebook-guide/">How to Create an Interactive Ebook</a>
+                    <a href="https://blog.kotobee.com/edit-epub-books-manually/">How to Edit EPUB Books Manually</a>
+                    <a href="https://blog.kotobee.com/ebook-drm-security-what-how/">Ebook DRM & Security</a>
+                    <a href="https://blog.kotobee.com/5-steps-pdf-to-interactive-ebook/">Convert Your PDF to an Interactive Ebook</a>
+                    <a href="https://blog.kotobee.com/ebook-apps/">Turn Your Book into an Ebook App</a>
+                    <a href="https://blog.kotobee.com/ebook-formats/">Ebook Formats Explained for Beginners</a>
+                    <a href="https://blog.kotobee.com/best-ebook-layout-reflowable-fixed/">Best Ebook Layout Format: Reflowable or Fixed?</a>
+                    <h4>Free Tools</h4>
+                    <a href="https://www.kotobee.org/convert">PDF to URL Converter</a>
+                </div>
+                <div class="link-col col-two">
+                    <h4>Programs</h4>
+                    <a href="/en/affiliates">Kotobee Affiliate Program</a>
+                    <a href="/en/invite">Invite Friends to Kotobee</a>
+                    <a href="https://www.kotobee.org/kotobee-ebook-contest-2020">Contests</a>
+                                            <a href="/en/ebook-publishing-basics-course">Ebook Courses</a>
+                                        <h4>Support</h4>
+                    <a href="https://support.kotobee.com/en/support/solutions/articles/8000027851-quick-guide">Getting Started with Kotobee</a>
+                    <a href="/academy">Kotobee Academy</a>
+                    <a href="/en/contact">Contact Us</a>
+                    <a href="/en/livedemo">Request a Demo</a>
+                    <a href="https://support.kotobee.com">Help Center</a>
+                </div>
+                <div class="link-col two-three">
+                    <h4>Company</h4>
+                    <a href="https://www.vijua.com/about">About Us</a>
+                    <a href="https://www.kotobee.org/awards">Awards</a>
+                    <a href="https://www.kotobee.org/privacy">Privacy Policy</a>
+                    <a href="https://kotobee.statuspage.io/">System Status</a>
+                    <a href="https://www.kotobee.org/advertise">Advertise with Us</a>
+                    <h4>Solutions</h4>
+                    <a href="/en/solutions/k12">K12 Education</a>
+                    <a href="/en/solutions/higher-education">Higher Education</a>
+                    <a href="/en/solutions/digital-publishing">Digital Publishing</a>
+                    <a href="/en/solutions/corporate-training">Corporate Training</a>
+                </div>
+                <div class="link-col cole-four">
+                    <h4>Quick Links</h4>
+                    <a href="https://blog.kotobee.com/">Blog</a>
+                    <a href="/en/case-studies">Case Studies</a>
+                    <a href="https://www.kotobee.org/mediakit">Press Kit</a>
+                    <a href="/en/customers">Customers</a>
+                                        <a href="/en/pricing">Pricing</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <hr>
+            <div class="bottomFooterContainer">
+                                    
+<div class="col-sm-5 newsletterContainer">
+  <h4>Subscribe for news and updates</h4>
+  <form class="newsletterForm" data-list="5815013">
+    <div class="form-group ml-field-email ml-validate-required ml-validate-email">
+      <input type="email" name="fields[email]" class="emailInput form-control" placeholder="Email*">
+    </div>
+    <button type="submit" class="submitBtn primary">
+        <img width="19" height="14" src="../img/web/footer/messge.png" alt="Send">
+    </button>
+  </form>
+    <div class="subscribeError">
+        <h3>error</h3>
+        <p>Please check your email and try again or <a href="https://support.kotobee.com">contact support</a>.</p>
+    </div>
+    <div class="subscribeSuccess">
+        <h3>Thank you for subscribing!</h3>
+        <p>You should start receiving emails instantly.</p>
+    </div>
+  <p>
+    Submit your email address to receive a weekly newsletter containing tips and updates. Unsubscribe from our emails at any time.
+  </p>
+</div> 
+
+                <div class="col-sm-5 footerSocial text-center">
+                    <h3>Follow us</h3>
+                    <a href="https://www.facebook.com/kotobee" target="_blank" aria-label="Facebook">
+                        <img src="../img/web/footer/facebook.png" width="24" height="24" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com/kotobee" target="_blank" aria-label="Twitter">
+                        <img src="../img/web/footer/twitter.png" width="24" height="24" alt="Twitter">
+                    </a>
+                    <a href="https://www.linkedin.com/company/kotobee/" target="_blank" aria-label="LinkedIn">
+                        <img src="../img/web/footer/linkedIn.png" width="24" height="24" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.youtube.com/c/Kotobee" target="_blank" aria-label="YouTube">
+                        <img src="../img/web/footer/youtube.png" width="24" height="24" alt="YouTube">
+                    </a>
+                    <p>
+                        <a href="/cdn-cgi/l/email-protection#b8d1d6ded7f8ced1d2cdd996dbd7d5">
+                            <span class="__cf_email__" data-cfemail="335a5d555c73455a5946521d505c5e">[email&#160;protected]</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-sm-5 footerAwards text-center">
+                    <a href="/en/awards" aria-label="Awards">
+                        <img src="../img/web/footer/qualityChoice.png" width="77" height="77" alt="Quality Choice">
+                        <img src="../img/web/footer/bestValue.png" width="102" height="101" alt="Best Value">
+                        <img src="../img/web/footer/excellent.png" width="76" height="77" alt="Excellent Support">
+                        <img src="../img/web/footer/witsa.png" width="94" height="78" alt="WITSA">
+                    </a>
+                </div>
+            </div>
+            <div class="copyrights text-center">
+                <p>Copyright © 2025 <a href="https://vijua.com/" target="_blank">Vijua</a></p>
+                            </div>
+            
+                                                                                                                                                                                
+                                                                                                                                        
+                    
+                    
+                    
+                                       
+        </div>
+    </div>
+
+ <!-- FreshChat Code -->
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      function initFreshChat() {
+        window.fcWidget.init({
+          token: "7692d0ce-eba9-45ca-97a5-2d21c0d07124",
+          host: "https://wchat.freshchat.com"
+        });
+      }
+      function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")};
+</script></div>
+
+
+</div>
+
+
+
+<script type="text/javascript">
+_linkedin_data_partner_id = "17896";
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+
+
+ <!-- Facebook Pixel Code -->
+        <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=597011190465103&ev=PageView&noscript=1"
+    /></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+	<script>
+		const UserManager = {
+			loadUsersFromLocalStorage: function() {
+				try {
+					const users = JSON.parse(localStorage.getItem('kotobee_users') || '[]');
+					return Array.isArray(users) ? users : [];
+				} catch (e) {
+					console.error('Error loading users from localStorage:', e);
+					return [];
+				}
+			},
+			
+			findUser: function(email) {
+				try {
+					const users = this.loadUsersFromLocalStorage();
+					const user = users.find(u => u.email === email);
+					
+					return user || null;
+				} catch (e) {
+					console.error('Error finding user:', e);
+					return null;
+				}
+			},
+			
+			getCurrentUser: function() {
+				try {
+					return JSON.parse(localStorage.getItem('kotobee_current_user') || 'null');
+				} catch (e) {
+					return null;
+				}
+			},
+			
+			logout: function() {
+				localStorage.removeItem('kotobee_current_user');
+				window.location.href = '../login';
+			},
+			
+			getFullUserData: function(email) {
+				return this.findUser(email);
+			}
+		};
+
+		document.addEventListener('DOMContentLoaded', function() {
+			const currentUser = UserManager.getCurrentUser();
+			
+			if (!currentUser || !currentUser.email) {
+				window.location.href = '../login';
+				return;
+			}
+			
+			loadUserDashboard(currentUser.email);
+			
+			const logoutBtn = document.getElementById('logoutBtn');
+			if (logoutBtn) {
+				logoutBtn.addEventListener('click', function(e) {
+					e.preventDefault();
+					if (confirm('Are you sure you want to logout?')) {
+						UserManager.logout();
+					}
+				});
+			}
+		});
+
+		function generateSerialForUser(email) {
+			if (!email) return null;
+			let hash = 0;
+			for (let i = 0; i < email.length; i++) {
+				const char = email.charCodeAt(i);
+				hash = ((hash << 5) - hash) + char;
+				hash = hash & hash;
+			}
+			const serial = Math.abs(hash).toString(16).toUpperCase().padStart(16, '0').substring(0, 16);
+			return serial.match(/.{4}/g).join('');
+		}
+		
+		function loadUserDashboard(email) {
+			try {
+				const user = UserManager.getFullUserData(email);
+				
+				if (!user) {
+					document.getElementById('dashboardContent').innerHTML = 
+						'<div class="alert alert-danger">User not found. Please login again.</div>';
+					return;
+				}
+				
+				displayUserInfo(user);
+				
+			} catch (error) {
+				console.error('Error loading dashboard:', error);
+				document.getElementById('dashboardContent').innerHTML = 
+					'<div class="alert alert-danger">Error loading dashboard. Please try again.</div>';
+			}
+		}
+
+		function displayUserInfo(user) {
+			const dashboardContent = document.getElementById('dashboardContent');
+			if (!dashboardContent) return;
+			
+			const loginTime = user.loginTime || new Date().toISOString();
+			const registeredAt = user.registeredAt || 'N/A';
+			
+			const formatDate = (dateString) => {
+				if (!dateString || dateString === 'N/A') return 'N/A';
+				try {
+					const date = new Date(dateString);
+					return date.toLocaleDateString('en-US', { 
+						year: 'numeric', 
+						month: 'long', 
+						day: 'numeric',
+						hour: '2-digit',
+						minute: '2-digit'
+					});
+				} catch (e) {
+					return dateString;
+				}
+			};
+			
+			const generateSerial = (email) => {
+				let hash = 0;
+				for (let i = 0; i < email.length; i++) {
+					const char = email.charCodeAt(i);
+					hash = ((hash << 5) - hash) + char;
+					hash = hash & hash;
+				}
+				const serial = Math.abs(hash).toString(16).toUpperCase().padStart(16, '0').substring(0, 16);
+				return serial.match(/.{4}/g).join('');
+			};
+			
+			const serialNumber = user.serialNumber || generateSerial(user.email);
+			
+			function generateUserId(email) {
+				if (!email) return Math.floor(Math.random() * 1000000);
+				let hash = 0;
+				for (let i = 0; i < email.length; i++) {
+					const char = email.charCodeAt(i);
+					hash = ((hash << 5) - hash) + char;
+					hash = hash & hash;
+				}
+				return Math.abs(hash) % 10000000;
+			}
+			const userId = user.id || generateUserId(user.email);
+			
+			dashboardContent.innerHTML = `
+				<div style="height: 50px;"></div>
+				
+				<div class="dashboard-welcome" style="text-align: center; margin-bottom: 25px;">
+					<h1 class="mainVertifyHeading" style="margin-bottom: 10px;">Welcome, ${user.name || user.username || user.email}!</h1>
+				</div>
+				
+				<div class="alignCenter" style="margin-bottom: 25px;">
+					<p style="font-size: 18px; margin-bottom: 0; display: flex; align-items: center; justify-content: center; gap: 10px;">
+						<span>Your serial number is <span class='underlineDotted' style="font-size: 20px; font-weight: bold;">${serialNumber}</span></span>
+						<button class="copy-btn" onclick="copyToClipboard('${serialNumber}', this)" id="serialCopyBtn">
+							Copy
+						</button>
+					</p>
+				</div>
+				
+				<div class="alignCenter" style="margin-bottom: 30px;">
+					<a id="download"></a>
+					<p style="margin-bottom: 20px;">
+						Simply download Kotobee Author below and use your serial number to activate your account.
+					</p>
+					<div style="margin-bottom: 15px;">
+						<a href="../download/author/win64" class="win dlBtn" title="Download for Windows">
+							<img src="../img/web/products/reader/btnWindows.png" alt="Download for Windows">
+						</a>
+						<a href="../download/author/mac" class="mac dlBtn" title="Download for Mac">
+							<img src="../img/web/products/reader/btnMac.png" alt="Download for Mac">
+						</a>
+						<a href="../download/author/deb" class="deb dlBtn" title="Download for Linux">
+							<img src="../img/web/products/reader/btnDeb.png" alt="Download for Linux">
+						</a>
+					</div>
+				</div>
+				
+				<hr style="border: 0; border-top: 2px solid #eee; margin: 40px 0;">
+				
+				<div class="dashboard-info">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="info-card">
+								<h3>Account Information</h3>
+								<div class="info-item">
+									<strong>Username:</strong> ${user.username || 'Not provided'}
+								</div>
+								<div class="info-item">
+									<strong>Email:</strong> ${user.email || 'N/A'}
+								</div>
+								<div class="info-item">
+									<strong>Name:</strong> ${user.name || 'Not provided'}
+								</div>
+								<div class="info-item">
+									<strong>Phone:</strong> ${user.phone || 'Not provided'}
+								</div>
+								<div class="info-item">
+									<strong>Affiliate Code:</strong> ${user.affiliate || 'Not provided'}
+								</div>
+								<div class="info-item">
+									<strong>User ID:</strong> ${userId || 'N/A'}
+								</div>
+								<div class="info-item">
+									<strong>Country:</strong> Not provided
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-6">
+							<div class="info-card">
+								<h3>Account Details</h3>
+								<div class="info-item">
+									<strong>Registered:</strong> ${formatDate(registeredAt)}
+								</div>
+								<div class="info-item">
+									<strong>Last Login:</strong> ${formatDate(loginTime)}
+								</div>
+							</div>
+							
+							<div class="info-card" style="margin-top: 20px;">
+								<h3>Subscription Details</h3>
+								<div class="info-item">
+									<strong>Subscription:</strong> ${user.subscription || 'Free'}
+								</div>
+								<div class="info-item">
+									<strong>Invited Users:</strong> ${user.invitedCount || 0}
+								</div>
+								<div class="info-item">
+									<strong>Credits:</strong> ${(user.referrals ? user.referrals.length : 0) * 10}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="vSpace20"></div>
+				
+				<hr style="border: 0; border-top: 2px solid #eee; margin: 40px 0;">
+				
+				<div class="referral-section">
+					<h2 style="text-align: center; margin-bottom: 30px; font-size: 24px; color: #333;">Referral Program</h2>
+					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="info-card">
+								<h3>Your Referral Link</h3>
+								<p style="margin-bottom: 15px; color: #666;">Share this link with your friends and earn rewards!</p>
+								<div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin-bottom: 15px; word-break: break-all;">
+									<span id="referralLink" style="font-size: 14px; color: #333;">${window.location.origin}${window.location.pathname.replace('/dashboard', '/register')}?ref=${userId}</span>
+								</div>
+								<button class="copy-btn" onclick="copyToClipboard(document.getElementById('referralLink').textContent, this)" style="width: 100%;">
+									Copy Referral Link
+								</button>
+							</div>
+						</div>
+						
+						<div class="col-md-6">
+							<div class="info-card">
+								<h3>Active Referrals</h3>
+								<div class="referral-stats" style="margin-bottom: 20px;">
+									<div style="font-size: 32px; font-weight: bold; color: #5cb85c; margin-bottom: 5px;">
+										${user.referrals ? user.referrals.length : 0}
+									</div>
+									<div style="color: #666; margin-bottom: 20px;">Total Referrals</div>
+								</div>
+								
+								<div class="referral-list" style="max-height: 300px; overflow-y: auto;">
+									${user.referrals && user.referrals.length > 0 ? 
+										(function() {
+											const allUsers = UserManager.loadUsersFromLocalStorage();
+											
+											return user.referrals.map(function(ref, index) {
+												let refDate = 'N/A';
+												if (ref.joinedDate) {
+													try {
+														const date = new Date(ref.joinedDate);
+														refDate = date.toLocaleDateString('en-US', { 
+															year: 'numeric', 
+															month: 'long', 
+															day: 'numeric'
+														});
+													} catch (e) {
+														refDate = 'N/A';
+													}
+												}
+												
+												const refUser = allUsers.find(u => u.email === ref.email);
+												const statusText = ref.type || (refUser && refUser.serialNumber ? 'Active' : 'Waiting for activation');
+												const statusColor = statusText === 'Active' ? '#5cb85c' : '#f0ad4e';
+												const statusSize = statusText === 'Active' ? '14px' : '13px';
+												const statusWeight = statusText === 'Active' ? 'bold' : '500';
+												const displayName = refUser ? (refUser.username || refUser.name || ref.email) : (ref.email || ref.name || 'Anonymous');
+												
+												return `
+													<div class="referral-item" style="padding: 10px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;" data-ref-index="${index}">
+														<div style="flex: 1;">
+															<strong>${displayName}</strong>
+															<div style="font-size: 12px; color: #999;">Joined at ${refDate}</div>
+														</div>
+														<div style="display: flex; align-items: center; gap: 10px;">
+															<span style="color: ${statusColor}; font-weight: ${statusWeight}; font-size: ${statusSize};">${statusText}</span>
+															${(user.username === 'Redpoint') ? `
+																<button class="delete-ref-btn" data-ref-index="${index}" style="display: none; background: #dc3545; color: white; border: none; border-radius: 3px; padding: 4px 8px; cursor: pointer; font-size: 12px;" title="Delete Referral">✕</button>
+															` : ''}
+														</div>
+													</div>
+												`;
+											}).join('');
+										})()
+										: 
+										'<p style="color: #999; text-align: center; padding: 20px;">No referrals yet. Share your link to get started!</p>'
+									}
+								</div>
+								
+								${(user.username === 'Redpoint') ? `
+									<hr style="border: 0; border-top: 1px solid #ddd; margin: 20px 0;">
+									<div style="padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
+										<h4 style="margin-bottom: 15px; font-size: 16px;">Add Manual Referral</h4>
+										<form id="addReferralForm" style="display: flex; flex-direction: column; gap: 10px;">
+											<input type="text" id="refUser" placeholder="User (email or username)" class="form-control input-sm" required>
+											<div style="display: flex; gap: 5px; align-items: center;">
+												<input type="date" id="refDate" class="form-control input-sm" required style="flex: 1;">
+												<button type="button" id="setTodayBtn" class="btn btn-default btn-sm" style="white-space: nowrap;">Bugün</button>
+											</div>
+											<select id="refType" class="form-control input-sm" required>
+												<option value="">Select Type</option>
+												<option value="Active">Active</option>
+												<option value="Waiting for activation">Waiting for activation</option>
+											</select>
+											<button type="submit" class="btn btn-primary btn-sm" style="width: 100%;">Add Referral</button>
+										</form>
+									</div>
+									
+									<div style="margin-top: 15px; padding: 10px; background-color: #f0f0f0; border-radius: 5px;">
+										<label style="display: flex; align-items: center; cursor: pointer; margin: 0;">
+											<input type="checkbox" id="showDeleteButtons" style="margin-right: 8px; cursor: pointer;">
+											<span>Show Delete Options</span>
+										</label>
+									</div>
+								` : ''}
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="vSpace20"></div>
+				
+				<div class="dashboard-actions">
+					<button id="logoutBtn" class="btn btn-danger">Logout</button>
+					<a href="../" class="btn btn-default">Go to Home</a>
+				</div>
+			`;
+			
+		const logoutBtn = document.getElementById('logoutBtn');
+		if (logoutBtn) {
+			logoutBtn.addEventListener('click', function(e) {
+				e.preventDefault();
+				if (confirm('Are you sure you want to logout?')) {
+					UserManager.logout();
+				}
+			});
+		}
+		
+		const showDeleteCheckbox = document.getElementById('showDeleteButtons');
+		if (showDeleteCheckbox) {
+			showDeleteCheckbox.addEventListener('change', function() {
+				const deleteButtons = document.querySelectorAll('.delete-ref-btn');
+				deleteButtons.forEach(btn => {
+					btn.style.display = this.checked ? 'block' : 'none';
+				});
+			});
+		}
+		
+		document.querySelectorAll('.delete-ref-btn').forEach(btn => {
+			btn.addEventListener('click', function() {
+				const refIndex = parseInt(this.getAttribute('data-ref-index'));
+				if (confirm('Bu referral\'i silmek istediğinizden emin misiniz?')) {
+					let users = JSON.parse(localStorage.getItem('kotobee_users') || '[]');
+					const currentUserIndex = users.findIndex(u => u.email === user.email);
+					
+					if (currentUserIndex !== -1 && users[currentUserIndex].referrals) {
+						users[currentUserIndex].referrals.splice(refIndex, 1);
+						users[currentUserIndex].invitedCount = users[currentUserIndex].referrals.length;
+						localStorage.setItem('kotobee_users', JSON.stringify(users));
+						loadUserDashboard();
+					}
+				}
+			});
+		});
+		
+		const setTodayBtn = document.getElementById('setTodayBtn');
+		if (setTodayBtn) {
+			setTodayBtn.addEventListener('click', function() {
+				const refDateInput = document.getElementById('refDate');
+				if (refDateInput) {
+					const today = new Date();
+					const year = today.getFullYear();
+					const month = String(today.getMonth() + 1).padStart(2, '0');
+					const day = String(today.getDate()).padStart(2, '0');
+					refDateInput.value = `${year}-${month}-${day}`;
+				}
+			});
+		}
+		
+		const addReferralForm = document.getElementById('addReferralForm');
+		if (addReferralForm) {
+			addReferralForm.addEventListener('submit', function(e) {
+				e.preventDefault();
+				
+				const refUser = document.getElementById('refUser').value.trim();
+				const refDate = document.getElementById('refDate').value;
+				const refType = document.getElementById('refType').value.trim();
+				
+				if (!refUser || !refDate || !refType) {
+					alert('Please fill all fields!');
+					return;
+				}
+				
+				let users = JSON.parse(localStorage.getItem('kotobee_users') || '[]');
+				const currentUserIndex = users.findIndex(u => u.email === user.email);
+				
+				if (currentUserIndex !== -1) {
+					if (!users[currentUserIndex].referrals) {
+						users[currentUserIndex].referrals = [];
+					}
+					
+					const dateObj = new Date(refDate);
+					const isoDate = dateObj.toISOString();
+					
+					users[currentUserIndex].referrals.push({
+						email: refUser.includes('@') ? refUser : refUser + '',
+						name: refUser,
+						joinedDate: isoDate,
+						type: refType
+					});
+					
+					users[currentUserIndex].invitedCount = users[currentUserIndex].referrals.length;
+					
+					localStorage.setItem('kotobee_users', JSON.stringify(users));
+					
+					document.getElementById('refUser').value = '';
+					document.getElementById('refDate').value = '';
+					document.getElementById('refType').value = '';
+					
+					loadUserDashboard();
+					
+					alert('Referral added successfully!');
+				}
+			});
+		}
+	}
+		
+		function copyToClipboard(text, button) {
+			if (navigator.clipboard && navigator.clipboard.writeText) {
+				navigator.clipboard.writeText(text).then(function() {
+					// Butonu "Copied" olarak değiştir
+					const originalText = button.textContent;
+					button.textContent = 'Copied';
+					button.classList.add('copied');
+					
+					// 2 saniye sonra tekrar "Copy" yap
+					setTimeout(function() {
+						button.textContent = originalText;
+						button.classList.remove('copied');
+					}, 2000);
+				}).catch(function(err) {
+					fallbackCopy(text, button);
+				});
+			} else {
+				fallbackCopy(text, button);
+			}
+		}
+		
+		function fallbackCopy(text, button) {
+			const textArea = document.createElement('textarea');
+			textArea.value = text;
+			textArea.style.position = 'fixed';
+			textArea.style.opacity = '0';
+			document.body.appendChild(textArea);
+			textArea.select();
+			try {
+				document.execCommand('copy');
+				const originalText = button ? button.textContent : 'Copy';
+				if (button) {
+					button.textContent = 'Copied';
+					button.classList.add('copied');
+					
+					setTimeout(function() {
+						button.textContent = originalText;
+						button.classList.remove('copied');
+					}, 2000);
+				}
+			} catch (err) {
+				alert('Failed to copy serial number. Please copy manually: ' + text);
+			}
+			document.body.removeChild(textArea);
+		}
+		
+	</script>
+	
+	<script src="../js/register.min.js"></script>
+<script src="/js/download.js"></script>
+
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" data-cf-beacon="{" version":"2024.11.0","token":"5fa0844b0b584b1b9dceeacc424be5eb","server_timing":{"name":{"cfcachestatus":true,"cfedge":true,"cfextpri":true,"cfl4":true,"cforigin":true,"cfspeedbrain":true},"location_startswith":null}}"="" crossorigin="anonymous"></script>
+
+</body></html>
+

